@@ -3,7 +3,7 @@
 #include <string>
 
 //make data types that hold 8 character, 16 character using "char[8]"
-
+using namespace std;
 struct BankAccount
 {
 	int id;
@@ -14,6 +14,7 @@ struct BankAccount
 
 void addAccount(char name[16], char password[8])
 {
+
 	int alwaysOne = 1;
 	while (alwaysOne = 1)
 	{

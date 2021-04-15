@@ -2,18 +2,51 @@
 //
 
 #include <iostream>
+#include <string>
+#include "consoleMessages.h"
+using namespace std;
 //#include "Account.h"
 int main()
 {
-    std::cout << "Hi! What would you like to do? Type A command, or type 'help' for a list of commands.\n";
-    char start[99];
-
-    std::cin >> start;
-
-    if (start[99] || "help")
+    string input = "";
+    while (input != "quit")
     {
-        std::cout << "List of commands: this option is coming soon! " << "\l";
+        std::cout << welcomeMessage << endl << "   ";
+        std::cin >> input;
+
+        if (input == "help")
+        {
+            std::cout << "List of commands: this option is coming soon! " << endl;
+        }else
+            if (input == "createAccount")
+            {
+                //Create account Start
+                cout << "What do you want the Username as?" << endl;
+                cin
+                //Create Account End
+            }else
+        if (input == "quit")
+        {
+            cout << plzDontGo << endl;
+            std::cin >> input;
+            if (input == "yes")
+            {
+                std::cout << leavingAcceptance;
+                input = "quit";
+            }
+            else
+            {
+                input = "";
+                std::cout << "Okay. Quit cancled." << endl;
+            }
+        }
+        else
+        {
+            std::cout << "Yikes. You typed '" << input << "'. That command wasn't found. Try again, or maybe check your spelling." << endl;
+        }
+
     }
+
     return 0;
 
 }
