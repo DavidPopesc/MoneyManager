@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MoneyManagerUpdated.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />

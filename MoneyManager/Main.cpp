@@ -1,17 +1,18 @@
 // MoneyManager.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
 #include <string>
 #include "consoleMessages.h"
 using namespace std;
-//#include "Account.h"
+#include "Account.h"
 int main()
 {
     string input = "";
+    int accid = 0;
+    std::cout << welcomeMessage << endl << endl;
     while (input != "quit")
     {
-        std::cout << welcomeMessage << endl << "   ";
+        std::cout << Instruction << endl << "   ";
         std::cin >> input;
 
         if (input == "help")
@@ -21,8 +22,20 @@ int main()
             if (input == "createAccount")
             {
                 //Create account Start
-                cout << "What do you want the Username as?" << endl;
-                cin
+                std::cout << "What do you want the Username as?" << endl;
+                std::cin >> input;
+                std::cout << "Okay, your username is:" << input << ". Confirm? (Type 'yes' or 'cancel'.)" << endl;
+
+                cin >> input;
+                    if (input == "yes")
+                    {
+                        accid++;
+
+                        std::cout << "Okay. What do you want your password to be?" << endl;
+                    }else 
+                    {
+                        std::cout << "Okay. Create account canceled." << endl;
+                    }
                 //Create Account End
             }else
         if (input == "quit")

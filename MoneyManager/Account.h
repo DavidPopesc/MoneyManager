@@ -11,16 +11,3 @@ struct BankAccount
 	char Name[16];
 	int Balance;
 };
-
-void addAccount(char name[16], char password[8])
-{
-
-	int alwaysOne = 1;
-	while (alwaysOne = 1)
-	{
-		if (option = "Add Account")
-		{
-
-		}
-	}
-}
