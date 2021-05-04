@@ -8,6 +8,8 @@ using namespace std;
 int main()
 {
     string input = "";
+    string user = "";
+    string pass = "";
     int accid = 0;
     std::cout << welcomeMessage << endl << endl;
     while (input != "quit")
@@ -23,20 +25,36 @@ int main()
             {
                 //Create account Start
                 std::cout << "What do you want the Username as?" << endl;
+                std::cin >> user;
+                std::cout << "Okay, your username is:" << user << ". Confirm? (Type 'yes' or 'cancel'.)" << endl;
                 std::cin >> input;
-                std::cout << "Okay, your username is:" << input << ". Confirm? (Type 'yes' or 'cancel'.)" << endl;
-
-                cin >> input;
                     if (input == "yes")
                     {
                         accid++;
-
                         std::cout << "Okay. What do you want your password to be?" << endl;
+                        cin >> pass;
+                        BankAccount user;
+                        user.Balance = 0;
+                        user.id = accid;
+                        user.password = pass;
+                        std::cout << "Account created!" << endl;
                     }else 
                     {
                         std::cout << "Okay. Create account canceled." << endl;
                     }
                 //Create Account End
+            }
+            else if (input == "balance")
+            {
+                std::cout << "Enter username: ";
+                std::cin >> input;
+                input.
+            }
+            else if (input == "ab")
+            {
+                std::cout << "Username: ";
+                cin >> input;
+
             }else
         if (input == "quit")
         {
@@ -61,7 +79,6 @@ int main()
     }
 
     return 0;
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
